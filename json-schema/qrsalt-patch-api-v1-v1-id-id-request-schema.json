@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/qrsalt/main/json-schema/qrsalt-patch-api-v1-v1-id-id-request-schema.json",
+  "title": "PatchApiV1V1IdIdRequest",
+  "x-generated": "2026-10-03",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/qrsalt-openapi-generated.yml#/components/schemas/PatchApiV1V1IdIdRequest",
+  "type": "object",
+  "properties": {
+    "destination": {
+      "type": "string"
+    },
+    "note": {
+      "type": "string"
+    }
+  }
+}

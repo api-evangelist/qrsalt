@@ -1,0 +1,42 @@
+# QRSalt
+
+> QR code generator with dynamic QR codes you can edit after printing, scan analytics, QR Menus, QR Forms and a REST API.
+
+## API
+- [QR code API](https://qrsalt.com/qr-code-api): what the API does, with a demo playground
+- [API docs](https://qrsalt.com/qr-code-api/docs): endpoints, parameters, examples and webhooks
+- [API docs as Markdown](https://qrsalt.com/qr-code-api/docs.md): the full reference in one file
+- [QR codes in n8n, Zapier and Make](https://qrsalt.com/qr-code-automation): the n8n and Make connectors and the Zapier app that is built but not public yet, their operations, install steps, worked examples, plan tiers and MIT licence
+- [QR code MCP server](https://qrsalt.com/qr-code-mcp-server): connect an AI assistant to a QR code account, with the setup for each client
+
+## Product
+- [Free QR code generator](https://qrsalt.com/): static codes with no account, dynamic codes you can re-point after printing, and how to tell which kind a printed code is
+- [Smart QR codes](https://qrsalt.com/smart-qr-codes): one code, different links by time, place, device or language
+- [QR code tracking](https://qrsalt.com/qr-code-tracking): scan analytics for every dynamic code, which printed item earned the scans, what a unique visitor counts as, and what is never stored
+- [Custom URL shortener](https://qrsalt.com/url-shortener): short links on their own, editable, routable and tracked, with custom endings
+- [Bulk QR code and barcode generator](https://qrsalt.com/bulk-qr-code-generator): an Excel sheet or CSV in, a QR code or barcode per row out, every check digit checked
+- [Barcode generator](https://qrsalt.com/barcode-generator): Code 128, EAN-13, EAN-8, UPC-A, Data Matrix, ITF-14, GS1-128, ISBN, PDF417, Aztec and Code 39, free and with no account; a GS1 DataMatrix builder that checks every application identifier (check digits, dates, field rules), with print sizes from GS1's X-dimension tables and a test read; plus GS1 Digital Link codes for packaging
+- [QR code reader online](https://qrsalt.com/qr-code-scanner): read a screenshot or photo and get the text, the address and the symbol's own details, free and with no account
+- [SVG QR code generator](https://qrsalt.com/svg-qr-code-generator): SVG, PNG and PDF downloads, their sizes, and print sizing
+- [QR code minimum size](https://qrsalt.com/qr-code-size): how small a QR code can be printed for its content, logo and scanning distance, in mm and inches, and in pixels for a screen, with a calculator that shows its working
+- [Wi-Fi QR code generator](https://qrsalt.com/wifi-qr-code-generator): a free code that joins a Wi-Fi network, made in the browser
+- [Branded QR codes on a custom domain](https://qrsalt.com/custom-domain-qr-code): QR codes and short links on your own domain
+- [QR code pricing](https://qrsalt.com/pricing): static codes free, dynamic codes on a plan
+- [About](https://qrsalt.com/about): what it is, where it runs, who runs it, and what happens if you cancel
+
+## QR Menus
+- [QR code with multiple links](https://qrsalt.com/qr-code-with-multiple-links): one code opening a page of links, for bios, socials and shops
+- [QR code menu](https://qrsalt.com/qr-code-for-menu): restaurant, café and bar menus, one code per table or a menu page
+
+## Codes for a job
+- [PDF to QR code](https://qrsalt.com/pdf-to-qr-code): upload a PDF and swap the file later
+- [Business card QR code (vCard)](https://qrsalt.com/qr-code-for-business-card): an editable contact card
+- [Google review QR code and review link](https://qrsalt.com/qr-code-for-reviews): the write-a-review address, as a code to print or a link to send
+- [App download QR code](https://qrsalt.com/app-store-qr-code): the App Store or Google Play, whichever store the phone uses
+- [Google Maps QR code](https://qrsalt.com/location-qr-code): an address or a pin that opens Google or Apple Maps
+- [QR codes for flyers and print marketing](https://qrsalt.com/qr-code-for-flyer): size, placement and paper for flyers, posters, brochures, mailings and print ads, and a code per drop
+- [Event QR code](https://qrsalt.com/event-qr-code): save the date in any calendar
+- [QR code for a Google Form](https://qrsalt.com/google-form-qr-code): paste a Google Form link and download its code, free; make it editable to open a new form later; or build a QR Form with no Google account
+- [Payment QR code](https://qrsalt.com/payment-qr-code): PayPal, Venmo, Cash App, Revolut, Wise and Stripe links, each app's own handle rules, and why Zelle's code only comes from your bank
+- [Social media QR code](https://qrsalt.com/social-media-qr-code): one code opening a page of buttons for every network you post on, with Instagram as the worked example
+- [Real estate QR codes](https://qrsalt.com/qr-code-for-real-estate): yard signs, window cards and flyers, repointed when a property sells

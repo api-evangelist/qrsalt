@@ -1,0 +1,1 @@
+{"resource":"https://app.qrsalt.com/api/mcp","authorization_servers":["https://app.qrsalt.com"],"scopes_supported":["render","read","write"],"bearer_methods_supported":["header"],"resource_name":"QRSalt MCP server","resource_documentation":"https://qrsalt.com/qr-code-mcp-server"}

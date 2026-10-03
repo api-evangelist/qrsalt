@@ -1,30 +1,133 @@
 aid: qrsalt
+
 name: QRSalt
-description: 'QRSalt is a company surfaced via the API Evangelist harvest backlog (source: new-submission)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://qrsalt.com/opengraph-image.png?24c24df84fa08fac
+
+description: QRSalt provides QR code and barcode generation services, offering both static free codes and dynamic codes with short links, scan
+  analytics, custom domains, and GS1 Digital Link support. The platform includes a free endpoint for rendering QR codes without an API key, as
+  well as paid plans for editable, trackable codes, and additional features like QR menus, forms, and bulk generation. Documentation and pricing
+  are available on their site, and a bearer key is used for authenticated API access via app.qrsalt.com.
+
 url: https://raw.githubusercontent.com/api-evangelist/qrsalt/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:new-submission
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-03 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-03'
+
 modified: '2026-10-03'
+
 tags:
-- Company
-apis: []
+- QR code
+- Barcode
+- API
+- Analytics
+- Dynamic links
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Plans
+  url: plans/qrsalt-plans-pricing.yml
+- type: Spectral
+  url: rules/qrsalt-rules.yml
+- type: JSONLD
+  url: json-ld/qrsalt-context.jsonld
+- type: Vocabulary
+  url: vocabulary/qrsalt-vocabulary.yml
+- type: DataModel
+  url: data-model/qrsalt-data-model.yml
+- type: Conformance
+  url: conformance/qrsalt-conformance.yml
+- type: LLMsTxt
+  url: llms/qrsalt-llms.txt
+- type: MCPServer
+  url: mcp/qrsalt-mcp.yml
+- type: WellKnown
+  url: well-known/qrsalt-well-known.yml
+- type: Hosts
+  url: hosts/qrsalt-hosts.yml
+- type: Vendors
+  url: vendors/qrsalt-vendors.yml
+- type: Webhooks
+  url: https://app.qrsalt.com/dashboard/webhooks
+- type: DomainSecurity
+  url: security/qrsalt-domain-security.yml
 - type: Website
   url: https://qrsalt.com/qr-code-api
 - type: Documentation
   url: https://qrsalt.com/qr-code-api/docs
-x-submission-notes: QR code and barcode generation plus dynamic QR codes/short links with scan analytics,
-  custom domains and GS1 Digital Link, bearer key at app.qrsalt.com.
-x-submission-probe: qr-code-api 200; docs.md 200 text/markdown 135KB; llms.txt 200; app.qrsalt.com/api/qr/free
-  200 image/svg+xml (live call); /zz-not-real-404 real 404; no OpenAPI (stated); no repo api-evangelist/qrsalt
+- type: Pricing
+  url: https://qrsalt.com/pricing
+- type: TermsOfService
+  url: https://qrsalt.com/legal/terms
+- type: PrivacyPolicy
+  url: https://qrsalt.com/legal/privacy
+- type: SignUp
+  url: https://app.qrsalt.com/register?next=%2Fdashboard%2Fapi
+- type: Support
+  url: https://qrsalt.com/about
+
+apis:
+- name: QR Code API
+  description: QR code generation API documented at QRSalt.
+  humanURL: https://qrsalt.com/qr-code-api/docs
+  baseURL: null
+  aid: qrsalt:qr-code-api
+- aid: qrsalt:qrsalt-api
+  name: QRSalt API
+  description: 'QRSalt API as documented publicly: 14 operations. Contract generated from the documentation by API Evangelist (2026-10-03); not
+
+    the provider''s own document.'
+  humanURL: https://qrsalt.com/qr-code-api
+  baseURL: https://app.qrsalt.com
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/qrsalt-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-v1-codes-bulk-request-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-v1-v1-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-qr-request-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-v1-domains-id-check-response-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-patch-api-v1-v1-id-id-request-schema.json
+
+x-submission-notes: QR code and barcode generation plus dynamic QR codes/short links with scan analytics, custom domains and GS1 Digital Link,
+  bearer key at app.qrsalt.com.
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: QRSalt provides API documentation but no OpenAPI or other machine‑readable contract is publicly available.
+  evidence:
+  - url: https://qrsalt.com/qr-code-api/docs
+    status: 200
+  checked: '2026-10-03'
+
+x-submission-probe: qr-code-api 200; docs.md 200 text/markdown 135KB; llms.txt 200; app.qrsalt.com/api/qr/free 200 image/svg+xml (live call);
+  /zz-not-real-404 real 404; no OpenAPI (stated); no repo api-evangelist/qrsalt
+
 x-submitted-by: support@qrsalt.com (apis.io/add, 2026-10-02)
+x-enrichment:
+  date: '2026-10-03'
+  status: enriched
+  artifacts_added: 26
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

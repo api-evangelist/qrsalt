@@ -1,0 +1,462 @@
+openapi: 3.1.0
+info:
+  title: QRSalt API
+  version: '2026-10-03'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-03: 14 operation(s) read from 2 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; QRSalt has published no machine-readable contract that the pipeline
+    could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 2
+    documentation: 12
+    pages-with-code: 2
+    pages-read: 2
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-03'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://qrsalt.com/qr-code-api
+  - https://qrsalt.com/qr-code-api/docs
+servers:
+- url: https://app.qrsalt.com
+paths:
+  /api/barcode:
+    get:
+      operationId: get_api_barcode
+      tags:
+      - Api
+      summary: GET /api/barcode draws the 12 barcode symbologies, EAN-13, Code 128 and Data Matrix among them.
+      x-source: https://qrsalt.com/qr-code-api
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/qr:
+    post:
+      operationId: post_api_qr
+      tags:
+      - Api
+      summary: POST /api/qr
+      x-source: https://qrsalt.com/qr-code-api
+      parameters:
+      - name: type
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: url
+        in: query
+        required: false
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiQrRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl No-code HTTP step JavaScript Python Copy curl -sS  ''https://app.qrsalt.com/api/qr?type=url&url=https%3A%2F%2Fexample.com%2Fmenu''  -H
+          "Authorization: Bearer $QRSALT_KEY"  -o qr.svg Render with no key Barcodes and every format on Free The account from Starter Signed
+          webhooks On this page What the free QR code API does What a paid key adds Your systems hear about every scan Keys, webhooks and do'
+  /api/qr/free:
+    get:
+      operationId: get_api_qr_free
+      tags:
+      - Api
+      summary: GET /api/qr/free draws a QR code and hands back an SVG or a PNG.
+      x-source: https://qrsalt.com/qr-code-api
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/qr/{qrid}:
+    post:
+      operationId: post_api_qr_qrid
+      tags:
+      - Api
+      summary: 'POST /api/qr/decode goes the other way: post a picture of a QR code or a barcode, and it answers with what the code says.'
+      x-source: https://qrsalt.com/qr-code-api
+      parameters:
+      - name: qrid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: data
+        in: query
+        required: false
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiQrQridRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiQrQridResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at qrId
+  /api/v1/codes/bulk:
+    post:
+      operationId: post_api_v1_codes_bulk
+      tags:
+      - Api
+      summary: Bulk actions
+      x-source: https://qrsalt.com/qr-code-api/docs
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiV1CodesBulkRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/v1/codes/{id}/{id}:
+    get:
+      operationId: get_api_v1_codes_id_id
+      tags:
+      - Api
+      summary: Get a code's image
+      x-source: https://qrsalt.com/qr-code-api/docs
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+        description: svg | png | jpg | webp | pdf (default svg)
+      - name: size
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: Width in pixels (64‑2000, default 512)
+      - name: mm
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: Printed width of PDF (5‑1000, default 40)
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at id
+  /api/v1/domains/{id}/check:
+    post:
+      operationId: post_api_v1_domains_id_check
+      tags:
+      - Api
+      summary: Check DNS now
+      x-source: https://qrsalt.com/qr-code-api/docs
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiV1DomainsIdCheckResponse'
+      x-evidence:
+        kind: documentation
+  /api/v1/forms/{id}/responses:
+    get:
+      operationId: get_api_v1_forms_id_responses
+      tags:
+      - Api
+      summary: GET /api/v1/forms/{id}/responses pages through what people sent, with each answer keyed by its question.
+      x-source: https://qrsalt.com/qr-code-api
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiV1FormsIdResponsesResponse'
+      x-evidence:
+        kind: documentation
+  /api/v1/{v1id}:
+    get:
+      operationId: get_api_v1_v1id
+      tags:
+      - Api
+      summary: Workspace analytics
+      x-source: https://qrsalt.com/qr-code-api/docs
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 9 example path(s) differing only at v1Id
+    post:
+      operationId: post_api_v1_v1id
+      tags:
+      - Api
+      summary: Create a dynamic code – POST https://app.qrsalt.com/api/v1/codes.
+      x-source: https://qrsalt.com/qr-code-api
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiV1V1IdRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiV1V1IdResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at v1Id
+  /api/v1/{v1id}/{id}:
+    delete:
+      operationId: delete_api_v1_v1id_id
+      tags:
+      - Api
+      summary: Delete a code
+      x-source: https://qrsalt.com/qr-code-api/docs
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 5 example path(s) differing only at v1Id
+    get:
+      operationId: get_api_v1_v1id_id
+      tags:
+      - Api
+      summary: Get a code
+      x-source: https://qrsalt.com/qr-code-api/docs
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 4 example path(s) differing only at v1Id
+    patch:
+      operationId: patch_api_v1_v1id_id
+      tags:
+      - Api
+      summary: Patch a code – send new destination or note to update an existing code.
+      x-source: https://qrsalt.com/qr-code-api
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchApiV1V1IdIdRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatchApiV1V1IdIdResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 3 example path(s) differing only at v1Id
+  /i/{slug}/{token}.png:
+    get:
+      operationId: get_i_slug_token_png
+      tags:
+      - I
+      summary: Public image link
+      x-source: https://qrsalt.com/qr-code-api/docs
+      parameters:
+      - name: slug
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: token
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: size
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: Width in pixels (64‑512, default 512)
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    PostApiQrRequest:
+      type: object
+      properties:
+        destination:
+          type: string
+        domain:
+          type: string
+        slug:
+          type: string
+    PostApiQrQridRequest:
+      type: object
+      properties:
+        image:
+          type: string
+      required:
+      - image
+    PostApiQrQridResponse:
+      type: object
+      properties:
+        content:
+          type: string
+    PostApiV1CodesBulkRequest:
+      type: object
+      properties:
+        action:
+          type: string
+          description: Bulk action type
+        ids:
+          type: array
+          description: Array of code IDs
+      required:
+      - action
+      - ids
+    PostApiV1DomainsIdCheckResponse:
+      type: object
+      properties:
+        data:
+          type: object
+          description: Result of DNS check
+    GetApiV1FormsIdResponsesResponse:
+      type: object
+      properties:
+        responses:
+          type: array
+    PostApiV1V1IdRequest:
+      type: object
+      properties:
+        destination:
+          type: string
+        domain:
+          type: string
+        slug:
+          type: string
+      required:
+      - destination
+    PostApiV1V1IdResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        short_link:
+          type: string
+        image_url:
+          type: string
+    PatchApiV1V1IdIdRequest:
+      type: object
+      properties:
+        destination:
+          type: string
+        note:
+          type: string
+    PatchApiV1V1IdIdResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+security:
+- bearer: []
+tags:
+- name: Api
+- name: I

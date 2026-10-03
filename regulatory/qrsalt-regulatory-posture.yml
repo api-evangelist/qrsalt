@@ -1,0 +1,36 @@
+generated: '2026-10-03'
+method: probed
+source: https://qrsalt.com/legal/privacy
+signals:
+  data_subject_request:
+    - evidence:
+        - source: https://qrsalt.com/legal/privacy
+          http_status: 200
+          fetched: true
+          quote: "You can export your data and delete your account from Settings."
+      section: "2. The short version"
+      note: Allows data subjects to request export and deletion of their personal data.
+  global_privacy_control:
+    - evidence:
+        - source: https://qrsalt.com/legal/privacy
+          http_status: 200
+          fetched: true
+          quote: "Global Privacy Control switches them off everywhere, without being asked."
+      section: "2. The short version"
+      note: Supports the Global Privacy Control signal to disable data sharing.
+  subprocessors:
+    - evidence:
+        - source: https://qrsalt.com/legal/subprocessors
+          http_status: 200
+          fetched: true
+          quote: "Each is bound by a written contract with data protection terms that meet Article 28 of the GDPR."
+      section: "Sub-processors"
+      note: Discloses use of sub‑processors under GDPR Article 28 contracts.
+  data_retention:
+    - evidence:
+        - source: https://qrsalt.com/legal/privacy
+          http_status: 200
+          fetched: true
+          quote: "Rate-limit counters keyed on an address are deleted when their window ends, within a day at most."
+      section: "3. What we collect, and why"
+      note: Indicates retention period of rate‑limit data (max one day).

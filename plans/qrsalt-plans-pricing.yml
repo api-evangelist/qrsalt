@@ -1,0 +1,26 @@
+generated: '2026-10-03'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://qrsalt.com/pricing
+sources:
+- https://qrsalt.com/pricing
+name: QRSalt pricing
+audience: business-product
+pricing_basis: per-seat
+plans:
+- name: Free
+  price_text: Free
+  description: Unlimited static QR codes, 3 editable dynamic codes, no charge.
+- name: Starter
+  price_text: $5 /mo
+  price: 5
+  description: 100 dynamic QR codes, 5 QR Menus, weekly smart routing, 500 API requests a month.
+- name: Pro
+  price_text: $15 /mo
+  price: 15
+  description: 600 dynamic QR codes, 50 QR Menus, region and city smart routing, 5,000 API requests a month, 10 team members.
+- name: Business
+  price_text: $39 /mo
+  price: 39
+  description: 2,000 dynamic QR codes, 400 QR Menus, 25 team members, 100,000 API requests a month, webhooks.
+docs: https://qrsalt.com/pricing

@@ -1,0 +1,8 @@
+generated: '2026-10-03'
+method: probed
+source: https://qrsalt.com/qr-code-mcp-server
+deployment:
+  mode: remote
+  endpoint: https://qrsalt.com/qr-code-mcp-server
+  auth: unknown
+  verified: probed
