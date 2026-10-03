@@ -1,0 +1,30 @@
+aid: qrsalt
+name: QRSalt
+description: 'QRSalt is a company surfaced via the API Evangelist harvest backlog (source: new-submission)
+  and added to the network as a stub for full-pipeline profiling.'
+url: https://raw.githubusercontent.com/api-evangelist/qrsalt/refs/heads/main/apis.yml
+x-type: company
+x-source: harvest:new-submission
+x-tier: stub
+x-tier-reason: harvest
+specificationVersion: '0.20'
+created: '2026-10-03'
+modified: '2026-10-03'
+tags:
+- Company
+apis: []
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+- FN: APIs.json
+  email: info@apis.io
+common:
+- type: Website
+  url: https://qrsalt.com/qr-code-api
+- type: Documentation
+  url: https://qrsalt.com/qr-code-api/docs
+x-submission-notes: QR code and barcode generation plus dynamic QR codes/short links with scan analytics,
+  custom domains and GS1 Digital Link, bearer key at app.qrsalt.com.
+x-submission-probe: qr-code-api 200; docs.md 200 text/markdown 135KB; llms.txt 200; app.qrsalt.com/api/qr/free
+  200 image/svg+xml (live call); /zz-not-real-404 real 404; no OpenAPI (stated); no repo api-evangelist/qrsalt
+x-submitted-by: support@qrsalt.com (apis.io/add, 2026-10-02)
