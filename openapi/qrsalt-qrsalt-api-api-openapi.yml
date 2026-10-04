@@ -1,0 +1,191 @@
+openapi: 3.2.0
+info:
+  title: QRSalt API
+  version: '2026-10-03'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-03: 14 operation(s) read from 2 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; QRSalt has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 2
+    documentation: 12
+    pages-with-code: 2
+    pages-read: 2
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-03'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://qrsalt.com/qr-code-api
+  - https://qrsalt.com/qr-code-api/docs
+servers:
+- url: https://app.qrsalt.com
+security:
+- bearer: []
+tags:
+- name: QRSalt API
+paths:
+  /api/v1/{v1id}:
+    get:
+      operationId: get_api_v1_v1id
+      tags:
+      - QRSalt API
+      summary: Workspace analytics
+      x-source: https://qrsalt.com/qr-code-api/docs
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 9 example path(s) differing only at v1Id
+    post:
+      operationId: post_api_v1_v1id
+      tags:
+      - QRSalt API
+      summary: Create a dynamic code – POST https://app.qrsalt.com/api/v1/codes
+      x-source: https://qrsalt.com/qr-code-api
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiV1V1IdRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiV1V1IdResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at v1Id
+  /api/v1/{v1id}/{id}:
+    delete:
+      operationId: delete_api_v1_v1id_id
+      tags:
+      - QRSalt API
+      summary: Delete a code
+      x-source: https://qrsalt.com/qr-code-api/docs
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 5 example path(s) differing only at v1Id
+    get:
+      operationId: get_api_v1_v1id_id
+      tags:
+      - QRSalt API
+      summary: Get a code
+      x-source: https://qrsalt.com/qr-code-api/docs
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 4 example path(s) differing only at v1Id
+    patch:
+      operationId: patch_api_v1_v1id_id
+      tags:
+      - QRSalt API
+      summary: Patch a code – send new destination or note to update an existing code
+      x-source: https://qrsalt.com/qr-code-api
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchApiV1V1IdIdRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatchApiV1V1IdIdResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 3 example path(s) differing only at v1Id
+components:
+  schemas:
+    PatchApiV1V1IdIdResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+    PostApiV1V1IdRequest:
+      type: object
+      properties:
+        destination:
+          type: string
+        domain:
+          type: string
+        slug:
+          type: string
+      required:
+      - destination
+    PostApiV1V1IdResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        short_link:
+          type: string
+        image_url:
+          type: string
+    PatchApiV1V1IdIdRequest:
+      type: object
+      properties:
+        destination:
+          type: string
+        note:
+          type: string
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

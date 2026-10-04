@@ -1,0 +1,43 @@
+{
+  "provider": "qrsalt",
+  "sources": [
+    "_ae-authored/qrsalt-openapi-generated.yml"
+  ],
+  "outputs": [
+    "qrsalt-barcode-api-openapi.yml",
+    "qrsalt-codes-api-openapi.yml",
+    "qrsalt-domains-api-openapi.yml",
+    "qrsalt-forms-api-openapi.yml",
+    "qrsalt-i-api-openapi.yml",
+    "qrsalt-qrsalt-api-api-openapi.yml",
+    "qrsalt-qr-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "qrsalt-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "qrsalt-openapi-generated.yml: tagged paths GET /api/barcode -> Barcode",
+    "qrsalt-openapi-generated.yml: tagged paths POST /api/qr -> Qr",
+    "qrsalt-openapi-generated.yml: tagged paths GET /api/qr/free -> Qr",
+    "qrsalt-openapi-generated.yml: tagged paths POST /api/qr/{qrid} -> Qr",
+    "qrsalt-openapi-generated.yml: tagged paths POST /api/v1/codes/bulk -> Codes",
+    "qrsalt-openapi-generated.yml: tagged paths GET /api/v1/codes/{id}/{id} -> Codes",
+    "qrsalt-openapi-generated.yml: tagged paths POST /api/v1/domains/{id}/check -> Domains",
+    "qrsalt-openapi-generated.yml: tagged paths GET /api/v1/forms/{id}/responses -> Forms",
+    "qrsalt-openapi-generated.yml: tagged paths GET /api/v1/{v1id} -> QRSalt API",
+    "qrsalt-openapi-generated.yml: tagged paths POST /api/v1/{v1id} -> QRSalt API",
+    "qrsalt-openapi-generated.yml: tagged paths DELETE /api/v1/{v1id}/{id} -> QRSalt API",
+    "qrsalt-openapi-generated.yml: tagged paths GET /api/v1/{v1id}/{id} -> QRSalt API",
+    "qrsalt-openapi-generated.yml: tagged paths PATCH /api/v1/{v1id}/{id} -> QRSalt API",
+    "qrsalt-openapi-generated.yml: declared missing tag: Barcode",
+    "qrsalt-openapi-generated.yml: declared missing tag: Codes",
+    "qrsalt-openapi-generated.yml: declared missing tag: Domains",
+    "qrsalt-openapi-generated.yml: declared missing tag: Forms",
+    "qrsalt-openapi-generated.yml: declared missing tag: QRSalt API",
+    "qrsalt-openapi-generated.yml: declared missing tag: Qr",
+    "apis.yml register: written (+7 apis, 8 total)"
+  ],
+  "skipped": []
+}

@@ -1,0 +1,130 @@
+openapi: 3.2.0
+info:
+  title: QRSalt Qr API
+  version: '2026-10-03'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-03: 14 operation(s) read from 2 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; QRSalt has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 2
+    documentation: 12
+    pages-with-code: 2
+    pages-read: 2
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-03'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://qrsalt.com/qr-code-api
+  - https://qrsalt.com/qr-code-api/docs
+servers:
+- url: https://app.qrsalt.com
+security:
+- bearer: []
+tags:
+- name: QR
+paths:
+  /api/qr:
+    post:
+      operationId: post_api_qr
+      tags:
+      - QR
+      summary: POST /api/qr
+      x-source: https://qrsalt.com/qr-code-api
+      parameters:
+      - name: type
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: url
+        in: query
+        required: false
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiQrRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl No-code HTTP step JavaScript Python Copy curl -sS  ''https://app.qrsalt.com/api/qr?type=url&url=https%3A%2F%2Fexample.com%2Fmenu''  -H "Authorization: Bearer $QRSALT_KEY"  -o qr.svg Render with no key Barcodes and every format on Free The account from Starter Signed webhooks On this page What the free QR code API does What a paid key adds Your systems hear about every scan Keys, webhooks and do'
+  /api/qr/free:
+    get:
+      operationId: get_api_qr_free
+      tags:
+      - QR
+      summary: GET /api/qr/free draws a QR code and hands back an SVG or a PNG
+      x-source: https://qrsalt.com/qr-code-api
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/qr/{qrid}:
+    post:
+      operationId: post_api_qr_qrid
+      tags:
+      - QR
+      summary: 'POST /api/qr/decode goes the other way: post a picture of a QR code or a…'
+      x-source: https://qrsalt.com/qr-code-api
+      parameters:
+      - name: qrid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: data
+        in: query
+        required: false
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiQrQridRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiQrQridResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at qrId
+components:
+  schemas:
+    PostApiQrQridRequest:
+      type: object
+      properties:
+        image:
+          type: string
+      required:
+      - image
+    PostApiQrRequest:
+      type: object
+      properties:
+        destination:
+          type: string
+        domain:
+          type: string
+        slug:
+          type: string
+    PostApiQrQridResponse:
+      type: object
+      properties:
+        content:
+          type: string
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

@@ -1,0 +1,60 @@
+openapi: 3.2.0
+info:
+  title: QRSalt I API
+  version: '2026-10-03'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-03: 14 operation(s) read from 2 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; QRSalt has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 2
+    documentation: 12
+    pages-with-code: 2
+    pages-read: 2
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-03'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://qrsalt.com/qr-code-api
+  - https://qrsalt.com/qr-code-api/docs
+servers:
+- url: https://app.qrsalt.com
+security:
+- bearer: []
+tags:
+- name: I
+paths:
+  /i/{slug}/{token}.png:
+    get:
+      operationId: get_i_slug_token_png
+      tags:
+      - I
+      summary: Public image link
+      x-source: https://qrsalt.com/qr-code-api/docs
+      parameters:
+      - name: slug
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: token
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: size
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: Width in pixels (64‑512, default 512)
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+components:
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

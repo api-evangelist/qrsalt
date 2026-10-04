@@ -85,17 +85,16 @@ apis:
   humanURL: https://qrsalt.com/qr-code-api/docs
   baseURL: null
   aid: qrsalt:qr-code-api
-- aid: qrsalt:qrsalt-api
-  name: QRSalt API
-  description: 'QRSalt API as documented publicly: 14 operations. Contract generated from the documentation by API Evangelist (2026-10-03); not
-
-    the provider''s own document.'
-  humanURL: https://qrsalt.com/qr-code-api
+- aid: qrsalt:qrsalt-barcode-api
+  name: QRSalt Barcode API
+  description: The Barcode API from QRSalt — 1 operation(s) for barcode.
+  humanURL: https://qrsalt.com/qr-code-api/docs
   baseURL: https://app.qrsalt.com
+  tags:
+  - Barcode
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/qrsalt-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/qrsalt-barcode-api-openapi.yml
   - type: JSONSchema
     url: json-schema/qrsalt-post-api-v1-codes-bulk-request-schema.json
   - type: JSONSchema
@@ -108,7 +107,138 @@ apis:
     url: json-schema/qrsalt-post-api-v1-domains-id-check-response-schema.json
   - type: JSONSchema
     url: json-schema/qrsalt-patch-api-v1-v1-id-id-request-schema.json
-
+- aid: qrsalt:qrsalt-codes-api
+  name: QRSalt Codes API
+  description: The Codes API from QRSalt — 2 operation(s) for codes.
+  humanURL: https://qrsalt.com/qr-code-api/docs
+  baseURL: https://app.qrsalt.com
+  tags:
+  - Codes
+  properties:
+  - type: OpenAPI
+    url: openapi/qrsalt-codes-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-v1-codes-bulk-request-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-v1-v1-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-qr-request-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-v1-domains-id-check-response-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-patch-api-v1-v1-id-id-request-schema.json
+- aid: qrsalt:qrsalt-domains-api
+  name: QRSalt Domains API
+  description: The Domains API from QRSalt — 1 operation(s) for domains.
+  humanURL: https://qrsalt.com/qr-code-api/docs
+  baseURL: https://app.qrsalt.com
+  tags:
+  - Domains
+  properties:
+  - type: OpenAPI
+    url: openapi/qrsalt-domains-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-v1-codes-bulk-request-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-v1-v1-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-qr-request-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-v1-domains-id-check-response-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-patch-api-v1-v1-id-id-request-schema.json
+- aid: qrsalt:qrsalt-forms-api
+  name: QRSalt Forms API
+  description: The Forms API from QRSalt — 1 operation(s) for forms.
+  humanURL: https://qrsalt.com/qr-code-api/docs
+  baseURL: https://app.qrsalt.com
+  tags:
+  - Forms
+  properties:
+  - type: OpenAPI
+    url: openapi/qrsalt-forms-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-v1-codes-bulk-request-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-v1-v1-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-qr-request-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-v1-domains-id-check-response-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-patch-api-v1-v1-id-id-request-schema.json
+- aid: qrsalt:qrsalt-i-api
+  name: QRSalt I API
+  description: The I API from QRSalt — 1 operation(s) for i.
+  humanURL: https://qrsalt.com/qr-code-api/docs
+  baseURL: https://app.qrsalt.com
+  tags:
+  - I
+  properties:
+  - type: OpenAPI
+    url: openapi/qrsalt-i-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-v1-codes-bulk-request-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-v1-v1-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-qr-request-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-v1-domains-id-check-response-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-patch-api-v1-v1-id-id-request-schema.json
+- aid: qrsalt:qrsalt-qr-api
+  name: QRSalt Qr API
+  description: The Qr API from QRSalt — 3 operation(s) for qr.
+  humanURL: https://qrsalt.com/qr-code-api/docs
+  baseURL: https://app.qrsalt.com
+  tags:
+  - Qr
+  properties:
+  - type: OpenAPI
+    url: openapi/qrsalt-qr-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-v1-codes-bulk-request-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-v1-v1-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-qr-request-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-v1-domains-id-check-response-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-patch-api-v1-v1-id-id-request-schema.json
+- aid: qrsalt:qrsalt-qrsalt-api-api
+  name: QRSalt QRSalt API
+  description: The QRSalt API API from QRSalt — 2 operation(s) for qrsalt api.
+  humanURL: https://qrsalt.com/qr-code-api/docs
+  baseURL: https://app.qrsalt.com
+  tags:
+  - QRSalt API
+  properties:
+  - type: OpenAPI
+    url: openapi/qrsalt-qrsalt-api-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-v1-codes-bulk-request-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-v1-v1-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-qr-request-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-post-api-v1-domains-id-check-response-schema.json
+  - type: JSONSchema
+    url: json-schema/qrsalt-patch-api-v1-v1-id-id-request-schema.json
 x-submission-notes: QR code and barcode generation plus dynamic QR codes/short links with scan analytics, custom domains and GS1 Digital Link,
   bearer key at app.qrsalt.com.
 

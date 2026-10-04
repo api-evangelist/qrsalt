@@ -1,0 +1,104 @@
+openapi: 3.2.0
+info:
+  title: QRSalt Codes API
+  version: '2026-10-03'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-03: 14 operation(s) read from 2 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; QRSalt has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 2
+    documentation: 12
+    pages-with-code: 2
+    pages-read: 2
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-03'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://qrsalt.com/qr-code-api
+  - https://qrsalt.com/qr-code-api/docs
+servers:
+- url: https://app.qrsalt.com
+security:
+- bearer: []
+tags:
+- name: Codes
+paths:
+  /api/v1/codes/bulk:
+    post:
+      operationId: post_api_v1_codes_bulk
+      tags:
+      - Codes
+      summary: Bulk actions
+      x-source: https://qrsalt.com/qr-code-api/docs
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiV1CodesBulkRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/v1/codes/{id}/{id}:
+    get:
+      operationId: get_api_v1_codes_id_id
+      tags:
+      - Codes
+      summary: Get a code's image
+      x-source: https://qrsalt.com/qr-code-api/docs
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+        description: svg | png | jpg | webp | pdf (default svg)
+      - name: size
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: Width in pixels (64‑2000, default 512)
+      - name: mm
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: Printed width of PDF (5‑1000, default 40)
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at id
+components:
+  schemas:
+    PostApiV1CodesBulkRequest:
+      type: object
+      properties:
+        action:
+          type: string
+          description: Bulk action type
+        ids:
+          type: array
+          description: Array of code IDs
+      required:
+      - action
+      - ids
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
