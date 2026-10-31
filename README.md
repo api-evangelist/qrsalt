@@ -64,5 +64,127 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-QRSalt is a company surfaced via the API Evangelist harvest backlog (source: new-submission) and added to the network as a stub for full-pipeline profiling.
-- https://qrsalt.com/qr-code-api
+QRSalt provides QR code and barcode generation services, offering both static free codes and dynamic codes with short links, scan analytics, custom domains, and GS1 Digital Link support. The platform includes a free endpoint for rendering QR codes without an API key, as well as paid plans for editable, trackable codes, and additional features like QR menus, forms, and bulk generation. Documentation and pricing are available on their site, and a bearer key is used for authenticated API access via app.qrsalt.com.
+
+**Areas:** QR Codes · Barcodes · Analytics · Dynamic links
+
+## QRSalt on APIs.io
+
+Everything profiled for QRSalt is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/qrsalt/](https://apis.io/providers/qrsalt/)** — or go straight to one of the APIs or properties below.
+
+### APIs (8)
+
+- [QR Code API](https://apis.io/apis/qrsalt/qr-code-api/) — QR code generation API documented at QRSalt.
+- [QRSalt Barcode API](https://apis.io/apis/qrsalt/qrsalt-barcode-api/) — The Barcode API from QRSalt — 1 operation(s) for barcode.
+- [QRSalt Codes API](https://apis.io/apis/qrsalt/qrsalt-codes-api/) — The Codes API from QRSalt — 2 operation(s) for codes.
+- [QRSalt Domains API](https://apis.io/apis/qrsalt/qrsalt-domains-api/) — The Domains API from QRSalt — 1 operation(s) for domains.
+- [QRSalt Forms API](https://apis.io/apis/qrsalt/qrsalt-forms-api/) — The Forms API from QRSalt — 1 operation(s) for forms.
+- [QRSalt I API](https://apis.io/apis/qrsalt/qrsalt-i-api/) — The I API from QRSalt — 1 operation(s) for i.
+- [QRSalt Qr API](https://apis.io/apis/qrsalt/qrsalt-qr-api/) — The Qr API from QRSalt — 3 operation(s) for qr.
+- [QRSalt QRSalt API](https://apis.io/apis/qrsalt/qrsalt-qrsalt-api-api/) — The QRSalt API API from QRSalt — 2 operation(s) for qrsalt api.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### JSON Schema (6)
+
+The data models the API reads and writes.
+
+- [PatchApiV1V1IdIdRequest](https://apis.io/schemas/qrsalt/qrsalt-patch-api-v1-v1-id-id-request/)
+- [PostApiQrRequest](https://apis.io/schemas/qrsalt/qrsalt-post-api-qr-request/)
+- [PostApiV1CodesBulkRequest](https://apis.io/schemas/qrsalt/qrsalt-post-api-v1-codes-bulk-request/)
+- [PostApiV1DomainsIdCheckResponse](https://apis.io/schemas/qrsalt/qrsalt-post-api-v1-domains-id-check-response/)
+- [PostApiV1V1IdRequest](https://apis.io/schemas/qrsalt/qrsalt-post-api-v1-v1-id-request/)
+- [PostApiV1V1IdResponse](https://apis.io/schemas/qrsalt/qrsalt-post-api-v1-v1-id-response/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Qrsalt Context](https://apis.io/jsonld/qrsalt/qrsalt-context/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [QRSalt API Rules](https://apis.io/rules/qrsalt/qrsalt-rules/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Qrsalt Domain Security](https://apis.io/security/qrsalt/qrsalt-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Qrsalt Plans Pricing](https://apis.io/plans/qrsalt/qrsalt-plans-pricing/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://qrsalt.com/qr-code-api)
+- [Documentation](https://qrsalt.com/qr-code-api/docs)
+- [Pricing](https://qrsalt.com/pricing)
+- [Sign up](https://app.qrsalt.com/register?next=%2Fdashboard%2Fapi)
+- [Support](https://qrsalt.com/about)
+- [Terms of service](https://qrsalt.com/legal/terms)
+- [Privacy policy](https://qrsalt.com/legal/privacy)
+
+## API Evangelist rating
+
+**Kin Score 35.1** — thin · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 63.3 |
+| Contract quality | 25.2 |
+| Contract governance | 22.0 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 14.3 |
+| Access clarity | 76.3 |
+
+**Agent readiness 40.3** — agent-ready (gated down from agent-native)
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | unknown |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 24.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/qrsalt/](https://apis.io/providers/qrsalt/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for QRSalt: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/qrsalt/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
